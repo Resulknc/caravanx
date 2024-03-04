@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.project</groupId>
-	<artifactId>caryatch</artifactId>
+	<artifactId>caravanx</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>caryatch</name>
 	<description>CarYacht</description>
