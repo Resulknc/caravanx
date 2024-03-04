@@ -35,13 +35,13 @@ public class Booking {
     private Payment paymentId;
 
     @Column(name = "booking_start_date")
-    private Date booking_start_date;
+    private Date bookingStartDate;
 
     @Column(name = "booking_end_date")
-    private Date booking_end_date;
+    private Date bookingEndDate;
 
     @Column(name = "total_cost")
-    private String total_cost;
+    private String totalCost;
 
     @Column(name = "status")
     private String status;
@@ -50,8 +50,8 @@ public class Booking {
     private String notes;
 
     @Column(name = "created_at")
-    private Date created_at;
+    private Date createdAt;
 
     @Column(name = "updatedAt")
-    private Date updated_at;
+    private Date updatedAt;
 }

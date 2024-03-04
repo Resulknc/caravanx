@@ -38,8 +38,8 @@ public class Review {
     private String comment;
 
     @Column(name = "submitted_at")
-    private Date submitted_at;
+    private Date submittedAt;
 
     @Column(name = "visibility_status")
-    private boolean visibility_status;
+    private boolean visibilityStatus;
 }

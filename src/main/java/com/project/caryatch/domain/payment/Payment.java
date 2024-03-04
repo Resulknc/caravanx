@@ -24,11 +24,11 @@ public class Payment {
 
     @ManyToOne
     @JoinColumn(name = "booking_id", referencedColumnName = "id", nullable = false)
-    private Booking booking_id;
+    private Booking bookingId;
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
-    private User user_id;
+    private User userId;
 
     @Column(name = "content")
     private long amount;
@@ -37,7 +37,7 @@ public class Payment {
     private String payment_method;
 
     @Column(name = "transaction_status")
-    private String transaction_status;
+    private String transactionStatus;
 
     @Column(name = "timestamp")
     private Date timestamp;

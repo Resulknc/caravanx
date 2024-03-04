@@ -1,6 +1,7 @@
 package com.project.caryatch.domain.advertisement;
 
 
+import com.project.caryatch.domain.amenity.Amenity;
 import com.project.caryatch.domain.booking.Booking;
 import com.project.caryatch.domain.category.Category;
 import com.project.caryatch.domain.location.Location;
@@ -35,8 +36,9 @@ public class Advertisement {
     private User userId;
 
 
-    @Column(name = "amenity")
-    private long amenity;
+    @ManyToOne
+    @JoinColumn(name ="amenity_id", referencedColumnName = "id", nullable = false)
+    private Amenity amenityId;
 
     @Column(name = "title")
     private String title;
@@ -58,16 +60,16 @@ public class Advertisement {
     private String priceType;
 
     @Column(name = "availability_start_date")
-    private Date availability_start_date;
+    private Date availabilityStartDate;
 
     @Column(name = "availability_end_date")
-    private Date availability_end_date;
+    private Date availabilityEndDate;
 
-    @Column(name = "CreatedAt")
-    private Date CreatedAt;
+    @Column(name = "createdAt")
+    private Date createdAt;
 
-    @Column(name = "UpdatedAt")
-    private Date UpdatedAt;
+    @Column(name = "updatedAt")
+    private Date updatedAt;
 
     @OneToMany(mappedBy = "advertisementId")
     private List<Booking> bookings;

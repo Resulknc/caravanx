@@ -21,8 +21,8 @@ public class Location {
     @Column(name = "name")
     private String city;
 
-    @Column(name = "state_province")
-    private String state_province;
+    @Column(name = "state")
+    private String state;
 
     @Column(name = "country")
     private String country;

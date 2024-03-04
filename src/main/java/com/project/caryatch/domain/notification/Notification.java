@@ -33,5 +33,5 @@ public class Notification {
     private Date time;
 
     @Column(name = "read_status")
-    private boolean read_status;
+    private boolean readStatus;
 }

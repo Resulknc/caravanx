@@ -23,11 +23,11 @@ public class Message {
 
     @ManyToOne
     @JoinColumn(name = "sender_user_id", referencedColumnName = "id", nullable = false)
-    private User sender_user_id;
+    private User senderUserId;
 
     @ManyToOne
     @JoinColumn(name = "recipient_user_id", referencedColumnName = "id", nullable = false)
-    private User recipient_user_id;
+    private User recipientUserId;
 
     @Column(name = "content")
     private String content;
@@ -36,5 +36,5 @@ public class Message {
     private Date time;
 
     @Column(name = "read_status")
-    private boolean read_status;
+    private boolean readStatus;
 }

@@ -1,4 +1,5 @@
-package com.project.caryatch.domain.category;
+package com.project.caryatch.domain.amenity;
+
 
 import com.project.caryatch.domain.advertisement.Advertisement;
 import jakarta.persistence.*;
@@ -8,15 +9,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "categories")
-public class Category {
+@Table(name = "amenity")
+public class Amenity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private String id;
@@ -24,12 +25,9 @@ public class Category {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "category_type")
-    private String categoryType;
+    @Column(name = "description")
+    private String description;
 
-    @Column(name = "popularity")
-    private String popularity;
-
-    @ManyToMany(mappedBy = "categories")
-    private Set<Advertisement> advertisements;
+    @OneToMany(mappedBy = "amenityId")
+    private List<Advertisement> advertisements;
 }

@@ -33,7 +33,7 @@ public class User {
     private String email;
 
     @Column(name = "password_hash")
-    private String password_hash;
+    private String passwordHash;
 
     @Column(name = "role")
     private String role;
@@ -53,10 +53,10 @@ public class User {
     @OneToMany(mappedBy = "userId")
     private List<Review> reviews;
 
-    @OneToMany(mappedBy = "sender_user_id")
+    @OneToMany(mappedBy = "senderUserId")
     private List<Message> sentmessages;
 
-    @OneToMany(mappedBy = "recipient_user_id")
+    @OneToMany(mappedBy = "recipientUserId")
     private List<Message> receivedmessages;
 
     @OneToMany(mappedBy = "userId")
