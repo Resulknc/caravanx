@@ -19,7 +19,7 @@ import java.util.Set;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private String id;
+    private Integer id;
 
     @Column(name = "name")
     private String name;
