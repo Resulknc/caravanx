@@ -20,7 +20,7 @@ public class Payment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private String id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "booking_id", referencedColumnName = "id", nullable = false)

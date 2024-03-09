@@ -29,7 +29,7 @@ import java.util.Set;
 public class Advertisement {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private String id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name ="user_id", referencedColumnName = "id", nullable = false)
